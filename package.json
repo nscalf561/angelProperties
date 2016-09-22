@@ -1,0 +1,27 @@
+{
+  "name": "angel-properties",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nscalf561/angelProperties.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "hbs": "^4.0.0",
+    "mongoose": "^4.4.17",
+    "morgan": "^1.7.0"
+  },
+  "bugs": {
+    "url": "https://github.com/nscalf561/angelProperties/issues"
+  },
+  "homepage": "https://github.com/nscalf561/angelProperties#readme"
+}
