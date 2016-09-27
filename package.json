@@ -18,7 +18,8 @@
     "express": "^4.13.4",
     "hbs": "^4.0.0",
     "mongoose": "^4.4.17",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "use-strict": "^1.0.1"
   },
   "bugs": {
     "url": "https://github.com/nscalf561/angelProperties/issues"

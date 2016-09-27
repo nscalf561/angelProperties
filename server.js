@@ -1,3 +1,4 @@
+require('use-strict');
 let express           = require('express'),
     app               = module.exports = express(),
     bodyParser        = require('body-parser'),
