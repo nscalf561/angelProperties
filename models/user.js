@@ -10,14 +10,19 @@ let UserSchema = new Schema ({
     type: String,
     required: true,
     unique: true,
-    trim: true
+    trim: true //Sanitizes input of whitespace
   },
   password: {
-    type: String
+    type: String,
+    required: true
   },
   role: {
     type: String
   },
+  picture: String, //TODO how do you store pictures
+  bio: String,
+  investorStatus: Boolean,
+  builderStatus: Boolean,
   previousInvestments: [String] //pointers to projects
 });
 
