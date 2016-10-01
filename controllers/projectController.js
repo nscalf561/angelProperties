@@ -19,7 +19,11 @@ let projectController = {
     let newProject = new Project({
       name: req.body.name,
       description: req.body.description,
-      fundraisingGoal: req.body.fundraisingGoal
+      fundraisingGoal: req.body.fundraisingGoal,
+      amountRaised: req.body.amountRaised,
+      usersWhoInvested: req.body.usersWhoInvested,
+      owners: req.body.owners,
+      location: req.body.location
     });
 
     newProject.save((err, newProject) => {
@@ -63,6 +67,18 @@ let projectController = {
         }
         res.json({project: project});
       });
+    });
+  },
+
+  deleteProject : (req, res) => {
+    Project.remove({_id: req.params.id}, (err) => {
+      if (err) {
+        res.status(500).send();
+        console.log('There was an error deleting the project: $(err)');
+        return err;
+      }
+
+      res.json({message: "project successfuly deleted"});
     });
   }
 
