@@ -3,6 +3,29 @@ let app     = require('../server'),
 
 let userController = {
 
+  //TODO this will need to move to be a session, here for testing CRUD
+  createUser : (req, res) => {
+    let newUser = new User({
+      name: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
+      role: req.body.role,
+      picture: req.body.picture,
+      bio: req.body.bio,
+      investorStatus: req.body.investorStatus,
+      builderStatus: req.body.builderStatus,
+      previousInvestments: req.body.previousInvestments
+    });
+
+    newUser.save((err) => {
+      if (err) {
+        res.status(500).send(); //TODO propogate error
+        console.log(`There was an error creating a new user: ${err}`);
+      }
+      res.json({success: true, msg: 'Successfully created a new user', user: newUser});
+    });
+  },
+
   index : (req, res) => {
     User.find({}, (err, users) => {
       if (err) {
