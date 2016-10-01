@@ -17,7 +17,7 @@ router.route('/api/users')
   .post(userController.createUser)
 ;
 
-router.route('/api/:id')
+router.route('/api/users/:id')
   .get(userController.findUserById)
   .put(userController.updateUser)
   .delete(userController.deleteUserById)

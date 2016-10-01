@@ -37,7 +37,7 @@ let userController = {
   },
 
   findUserById : (req, res) => {
-    User.findOne({id: req.params.id}, (err, user) => {
+    User.findOne({_id: req.params.id}, (err, user) => {
       if (err) {
         res.status(500).send(); //TODO propogate errors
         console.log(`There was an error getting the user by id: ${err}`);
@@ -47,7 +47,7 @@ let userController = {
   },
 
   updateUser : (req, res) => {
-    User.findOne({id: req.params.id}, (err, user) => {
+    User.findOne({_id: req.params.id}, (err, user) => {
       if (err) {
         res.status(500).send(); //TODO propgate errors
         console.log(`There was an error getting the user to update: ${err}`);
@@ -65,7 +65,7 @@ let userController = {
       //TODO this will require much more logic, when does an investment become previous?
       if (req.body.previousInvestments) { user.previousInvestments = req.body.previousInvestments; }
 
-      User.update({id: req.params.id}, user, (err, user) => {
+      User.update({_id: req.params.id}, user, (err, user) => {
         if (err) {
           res.status(500).send(); //TODO propgate error
           console.log(`There was an error updating the user: ${err}`);
@@ -76,7 +76,7 @@ let userController = {
   },
 
   deleteUserById : (req, res) => {
-    User.remove({id: req.params.id}, (err) => {
+    User.remove({_id: req.params.id}, (err) => {
       if (err) {
         res.status(500).send(); //TODO propogate errors
         console.log(`There was an error deleting the user by id (${req.params.id}): ${err}`);
