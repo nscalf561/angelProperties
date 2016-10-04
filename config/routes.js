@@ -3,10 +3,10 @@ let express             = require('express'),
     path                = require('path'),
     apiController       = require('../controllers/apiController'),
     userController      = require('../controllers/userController'),
-    projectController	= require('../controllers/projectController'),
-    mongoose			= require('mongoose'),
-    User				= mongoose.model('User'),
-    Project 			= mongoose.model('Project');
+    projectController	  = require('../controllers/projectController'),
+    mongoose			      = require('mongoose'),
+    User				        = mongoose.model('User'),
+    Project 			      = mongoose.model('Project');
 
 router.route('/api')
   .get(apiController.index);
