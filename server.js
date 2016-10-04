@@ -36,4 +36,3 @@ mongoose.connect(config.database);
 app.set('secrets', secrets);
 
 app.use(routes);
-

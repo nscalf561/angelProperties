@@ -12,25 +12,9 @@ router.route('/api')
   .get(apiController.index);
 
 router.route('/')
-  .get(function (req, res ) {
+  .get((req, res) => {
     res.render('home', {layout: 'index'});
   });
-
-// Register User
-// router.route('/api/signup')
-//   .post(sessionsController.signup);
-
-// router.route('/api/authenticate')
-//   .post(sessionsController.authenticate);
-
-// Users (TODO: functions need to match userController)
-// router.route('/api/users')
-//   .get(userController.index);
-
-// router.route('/api/users/:id')
-//   .get(userController.showUser)
-//   .put(userController.updateUser)
-//   .delete(userController.deleteUser);
 
 // Projects 
 router.route('/api/projects')
@@ -42,5 +26,16 @@ router.route('/api/projects/:id')
   .put(projectController.updateProject)
   .delete(projectController.deleteProject);
 
+// Users
+router.route('/api/users')
+  .get(userController.index)
+  .post(userController.createUser)
+;
+
+router.route('/api/users/:id')
+  .get(userController.findUserById)
+  .put(userController.updateUser)
+  .delete(userController.deleteUserById)
+;
 
 module.exports = router;
