@@ -4,6 +4,7 @@ let express             = require('express'),
     apiController       = require('../controllers/apiController'),
     userController      = require('../controllers/userController'),
     projectController	  = require('../controllers/projectController'),
+    sessionsController  = require('../controllers/sessionsController'),
     mongoose			      = require('mongoose'),
     User				        = mongoose.model('User'),
     Project 			      = mongoose.model('Project');
@@ -15,6 +16,14 @@ router.route('/')
   .get((req, res) => {
     res.render('home', {layout: 'index'});
   });
+
+// Registration
+router.route('/signup')
+  .post(sessionsController.signup);
+
+// route to authenticate a user 
+router.route('/authenticate')
+  .post(sessionsController.authenticate);
 
 // Projects 
 router.route('/api/projects')
