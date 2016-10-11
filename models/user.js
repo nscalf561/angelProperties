@@ -1,8 +1,5 @@
 let mongoose  = require('mongoose'),
-<<<<<<< d24b9e795f3e547fd993534233b4d6049ee0e341
-=======
     bcrypt    = require('bcrypt'),
->>>>>>> user auth + jwt
     Schema    = mongoose.Schema;
 
 let UserSchema = new Schema ({
