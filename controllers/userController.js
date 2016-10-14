@@ -11,9 +11,20 @@ let userController = {
       password: req.body.password,
       role: req.body.role,
       picture: req.body.picture,
-      bio: req.body.bio,
-      investorStatus: req.body.investorStatus,
+      about: {
+        picture: req.body.picture,
+        bio: req.body.bio,
+        markets: req.body.markets,
+        education: {
+          schoolName: req.body.schoolName,
+          degree: req.body.degree,
+          graduationYear: req.body.graduationYear
+        }
+      },
       builderStatus: req.body.builderStatus,
+      investorStatus: req.body.investorStatus,
+      advisorToCompanies: req.body.advisorToCompanies,
+      lookingForFundingSupport: req.body.lookingForFundingSupport,
       previousInvestments: req.body.previousInvestments
     });
 
