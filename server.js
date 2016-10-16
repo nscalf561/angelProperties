@@ -6,11 +6,10 @@ let express           = require('express'),
     mongoose          = require('mongoose'),
     cors              = require('cors'),
     morgan            = require('morgan'),
-    
+
     //auth
     passport          = require('passport'),
     jwt               = require('jwt-simple'),
-    secrets           = require('./secrets'),
     apiController     = require('./controllers/apiController'),
     config            = require('./config/config'),
     routes            = require('./config/routes');
