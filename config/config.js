@@ -1,5 +1,5 @@
 module.exports = {
 
-  'database': 'mongodb://localhost'
+  'database': 'mongodb://localhost/angelproperties'
 
 };
