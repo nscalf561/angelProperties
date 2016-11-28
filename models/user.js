@@ -17,14 +17,25 @@ let UserSchema = new Schema ({
     type: String,
     required: true
   },
-  role: {
+  role: { //Investor or Entrepreneur
     type: String
   },
-  picture: String, //TODO how do you store pictures
-  bio: String,
+  about: {
+    picture: String, //TODO how do you store pictures
+    bio: String,
+    markets: [String],
+    education: [{
+      schoolName: String,
+      degree: String,
+      graduationYear: String,
+    }]
+  },
+  entrepreneurStatus: Boolean,
   investorStatus: Boolean,
-  builderStatus: Boolean,
-  previousInvestments: [String] //pointers to projects
+  //if investor status is true
+  advisorToCompanies: [String], //pointers to companies
+  previousInvestments: [String], //pointers to companies
+  lookingForFundingSupport: Boolean
 });
 
 UserSchema.pre('save', function (next) {
@@ -46,7 +57,7 @@ UserSchema.pre('save', function (next) {
       return next();
     }
 });
- 
+
 UserSchema.methods.comparePassword = function (passw, cb) {
   bcrypt.compare(passw, this.password, function (err, isMatch) {
     if (err) {
