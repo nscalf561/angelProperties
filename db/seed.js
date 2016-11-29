@@ -2,7 +2,7 @@ var mongoose 		= require('mongoose'),
 	User			= require('../models/user'),
 	Project 		= require('../models/project');
 
-mongoose.connect('mongodb://localhost/angelProperties');
+mongoose.connect('mongodb://localhost/angelproperties');
 
 
 //clears existing users and projects from database
@@ -57,25 +57,27 @@ var userList = [
 let projectList = [];
 
 
-// userList.forEach((user) => {
-	// let newUser = new User(user);
-	// newUser.save((err) => {
-	// 	if (err) {
-	// 		console.log(`Error creating user seed: ${err}`);
-	// 		process.exit();
-	// 		mongoose.connection.close();
-	// 	}
-	// });
-// });
+userList.forEach((user) => {
+	let newUser = new User(user);
+	newUser.save((err) => {
+		if (err) {
+			console.log(`Error creating user seed: ${err}`);
+			process.exit();
+			mongoose.connection.close();
+		}
 
-User.create(userList, (err, users) => {
-	if (err) {
-		console.log(`Error creating user seed: ${err}`);
-		process.exit();
-		mongoose.connection.close();
-	}
-	console.log(users);
+		console.log ('success');
+	});
 });
+
+// User.create(userList, (err, users) => {
+// 	if (err) {
+// 		console.log(`Error creating user seed: ${err}`);
+// 		process.exit();
+// 		mongoose.connection.close();
+// 	}
+// 	console.log(users);
+// });
 
 
 
