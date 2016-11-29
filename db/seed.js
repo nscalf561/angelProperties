@@ -43,12 +43,35 @@ var userList = [
 				graduationYear: "1642"
 			}]
 		},
-		entrepreneurStatus: 'False',
-	  investorStatus: 'True',
+		entrepreneurStatus: false,
+	  investorStatus: true,
 	  //if investor status is true
 	  advisorToCompanies: [],
 	  previousInvestments: [],
-	  lookingForFundingSupport: 'True'
+	  lookingForFundingSupport: true
+	},
+
+	{
+		name: "Caleb",
+		email: "caleb@gmail.com",
+		password: "12345",
+		role: "Investor",
+		about: {
+			picture: "This will need to be a picture",
+			bio: "Here is a string",
+			markets: ["This will likely change", "Why am i a string?"],
+			education: [{
+				schoolName: "Berkeley",
+				degree: "Vagina Doctor",
+				graduationYear: "1642"
+			}]
+		},
+		entrepreneurStatus: false,
+	  investorStatus: true,
+	  //if investor status is true
+	  advisorToCompanies: [],
+	  previousInvestments: [],
+	  lookingForFundingSupport: true
 	}
 ];
 
