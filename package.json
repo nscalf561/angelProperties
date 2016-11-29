@@ -4,11 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-
     "test": "mocha",
     "dev": "webpack -d --watch",
     "build": "webpack -p",
-
   },
   "repository": {
     "type": "git",
