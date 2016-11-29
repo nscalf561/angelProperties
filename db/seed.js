@@ -27,7 +27,20 @@ Project.remove({}, (err, projects) => {
 
 
 //TODO create seed data for users
-var userList = [];
+var userList = [
+	{
+		name: "Jess",
+		email: "jess@gmail.com",
+		password: "GiveMeCheeseOrGiveMeDeath",
+		role: "Investor",
+		about: {
+			picture: "This will need to be a picture"
+		}
+	},
+	{
+
+	}
+];
 
 //TODO create seed data for projects
 
