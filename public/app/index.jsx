@@ -1,10 +1,17 @@
-import React from 'react';
-import {render} from 'react-dom';
+// import React from 'react';
+// import {render} from 'react-dom';
 
-class App extends React.Component {
-  render () {
-    return <p> Angel Properties!</p>;
-  }
-}
+// class App extends React.Component {
+//   render () {
+//     return <p> Angel Properties </p>;
+//   }
+// }
 
-render(<App/>, document.getElementById('app'));
+// class ContactForm extends React.Component {
+//   render () {
+//     return <p> asdasdasd </p>;
+//   }
+// }
+
+// render(<App/>, document.getElementById('app'));
+// render(<ContactForm/>, document.getElementById('login'));

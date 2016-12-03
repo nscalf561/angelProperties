@@ -42,9 +42,9 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/*!******************************!*\
-  !*** ./public/app/index.jsx ***!
-  \******************************/
+/*!*******************************!*\
+  !*** ./public/user/login.jsx ***!
+  \*******************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -80,7 +80,7 @@
 	      return _react2.default.createElement(
 	        'p',
 	        null,
-	        ' Angel Properties!'
+	        ' Angel Properties '
 	      );
 	    }
 	  }]);
@@ -88,7 +88,80 @@
 	  return App;
 	}(_react2.default.Component);
 	
+	var ContactForm = function (_React$Component2) {
+	  _inherits(ContactForm, _React$Component2);
+	
+	  function ContactForm() {
+	    _classCallCheck(this, ContactForm);
+	
+	    return _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).apply(this, arguments));
+	  }
+	
+	  _createClass(ContactForm, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'p',
+	        null,
+	        ' asdasdasd '
+	      );
+	    }
+	  }]);
+	
+	  return ContactForm;
+	}(_react2.default.Component);
+	
 	(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById('app'));
+	(0, _reactDom.render)(_react2.default.createElement(ContactForm, null), document.getElementById('login'));
+	
+	// import React from 'react';
+	// import {render} from 'react-dom';
+	
+	// class ContactForm extends React.Component {
+	
+	//   render() {
+	//     return
+	//       React.createElement('form', {className: 'ContactForm'},
+	//         React.createElement('input', {
+	//           type: 'text',
+	//           placeholder: 'Name (required)',
+	//           value: this.props.value.name,
+	//         })
+	
+	//       )
+	//   }
+	// }
+	
+	// var ContactForm = React.createClass({
+	//   propTypes: {
+	//     value: React.PropTypes.object.isRequired
+	//   },
+	
+	
+	//   render: function() {
+	//     return (
+	//       React.createElement('form', {className: 'ContactForm'},
+	//         React.createElement('input', {
+	//           type: 'text',
+	//           placeholder: 'Name (required)',
+	//           value: this.props.value.name,
+	//         }),
+	//         React.createElement('input', {
+	//           type: 'email',
+	//           placeholder: 'Email',
+	//           value: this.props.value.email,
+	//         }),
+	//         React.createElement('textarea', {
+	//           placeholder: 'Description',
+	//           value: this.props.value.description,
+	//         }),
+	//         React.createElement('button', {type: 'submit'}, "Add Contact")
+	//       )
+	//     );
+	//   },
+	// });
+	
+	// render(<ContactForm/>, document.getElementById('login'));
 
 /***/ },
 /* 1 */
@@ -21972,4 +22045,5 @@
 
 /***/ }
 /******/ ]);
+//# sourceMappingURL=bundle.js.map
 //# sourceMappingURL=bundle.js.map
