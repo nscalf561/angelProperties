@@ -27,6 +27,8 @@ app.use(passport.initialize());
 
 // Set default to serve static files from public folder
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/bower_components'));
+
 
 // TODO: revisit how the front end will be rendered, using handlebars
 app.set('view engine', 'hbs');
