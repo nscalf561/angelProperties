@@ -3,10 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>Angel Properties</title>
+
+  <!-- Include Angular -->
+  <script type="text/javascript" src="angular/angular.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+
 </head>
-<body>
-  <h1>Sanity Check</h1>
-  <div id="app" />
-  <script src = 'output/bundle.js' type='text/javascript'></script>
-</body>
+<body ng-app="ngFun">
+    <div ng-controller="PokemonCtrl">
+
+      <h1>Trainer: {{trainer.name}}</h1>
+
+      <input ng-model="trainer.name" placeholder="Enter your name">
+      <input ng-model="pokeSearch" placeholder="Search a Pokemon">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Ndex</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Nemeses</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="poke in pokemon | orderBy:'Ndex' | filter: pokeSearch">
+            <td>{{poke.Ndex}}</td>
+            <td>{{poke.name}}</td>
+            <td>{{poke.type}}</td>
+            <td>{{poke.name|reverse}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </body>
 </html>
