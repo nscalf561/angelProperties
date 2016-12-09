@@ -1,20 +1,28 @@
-var app = angular.module("AngelProperties", ['ngRoute']);
+var app = angular.module("AngelProperties", ['ui.router']);
 
-app.config(($routeProvider) => {
+app.config(["$stateProvider", "$locationProvider", "$urlRouterProvider", ($stateProvider, $locationProvider, $urlRouterProvider) => {
 
-  $routeProvider
+  $urlRouterProvider.otherwise('/');
 
-    .when('/', {
+  $stateProvider
+
+    .state('home', {
+      url: '/',
       templateUrl : 'templates/home.html',
       // controller : 'mainController'
     })
 
-    .when('/login', {
+    .state('login', {
+      url: '/login',
       templateUrl : 'templates/login.html',
       controller : 'loginController'
     });
 
-});
+    $locationProvider.html5Mode({
+      enabled: true,
+      requiredBase: false
+    });
+}]);
 
 app.controller('loginController', ($scope) => {
   $scope.loginForm = true;

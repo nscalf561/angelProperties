@@ -14,13 +14,14 @@
 
   <!-- Include Angular -->
   <script type="text/javascript" src="angular/angular.js"></script>
-  <script type="text/javascript" src="angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="angular-ui-router/release/angular-ui-router.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
   <script type="text/javascript" src="js/LoginPage.js"></script>
 
+  <base href="/">
 
 </head>
 <body ng-app="AngelProperties">
-  <div ng-view></div>
+  <div ui-view></div>
 </body>
 </html>

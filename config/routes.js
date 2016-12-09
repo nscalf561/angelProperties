@@ -9,6 +9,14 @@ let express             = require('express'),
     User				        = mongoose.model('User'),
     Project 			      = mongoose.model('Project');
 
+// serve angular front end files from root path
+router.use('/', express.static('app', { redirect:false }));
+
+// rewrite virtual urls to angular app to enable refreshing of internal pages
+router.get('*', function (req, res, next) {
+  res.sendFile(path.resolve('public/index.html'));
+});
+
 router.route('/api')
   .get(apiController.index);
 
@@ -21,11 +29,11 @@ router.route('/')
 router.route('/signup')
   .post(sessionsController.signup);
 
-// route to authenticate a user 
+// route to authenticate a user
 router.route('/authenticate')
   .post(sessionsController.authenticate);
 
-// Projects 
+// Projects
 router.route('/api/projects')
   .get(projectController.entireProjectList)
   .post(projectController.createProject);
